@@ -1,5 +1,4 @@
-import { IArduinoDebug } from './iarduinodebug'
-
+import { IArduinoDebug } from './iarduinodebug';
 import * as child from 'child_process';
 
 
@@ -22,43 +21,46 @@ export class ArduinoDebug implements IArduinoDebug {
         sketpath: string,
         buipath: string
     ) {
+        if (!ardexepath) {
+            throw "arduino_debug.exe path not empty";
+        }
         this.arduinoExePath = ardexepath;
         this.sketchbookPath = sketpath;
         this.buildPath = buipath;
     }
 
     // run arduino_debug.exe --install-boards "arduino:avr" to init package_index.json under Arduino15
-    Init(): Thenable<string[]> {
+    init(): Thenable<string[]> {
         return new Promise((resolve) => { resolve("not implemented"); });
     }
     // return ExitStatus or output
-    Build(inoFilePath: string): Thenable<string[]> {
-        return new Promise((resolve) => { resolve("not implemented"); });
-    }
-
-    // return ExitStatus or output
-    Upload(inoFilePath: string): Thenable<string[]> {
+    build(inoFilePath: string): Thenable<string[]> {
         return new Promise((resolve) => { resolve("not implemented"); });
     }
 
     // return ExitStatus or output
-    GetPreference(pref: string): Thenable<any[]> {
+    upload(inoFilePath: string): Thenable<string[]> {
         return new Promise((resolve) => { resolve("not implemented"); });
     }
 
-    InstallBoard(board: string): Thenable<string[]> {
+    // return ExitStatus or output
+    getPreference(pref: string): Thenable<any[]> {
         return new Promise((resolve) => { resolve("not implemented"); });
     }
 
-    InstallLibrary(library: string): Thenable<string[]> {
+    installBoard(board: string): Thenable<string[]> {
         return new Promise((resolve) => { resolve("not implemented"); });
     }
 
-    Monitor(): Thenable<string[]> {
+    installLibrary(library: string): Thenable<string[]> {
         return new Promise((resolve) => { resolve("not implemented"); });
     }
 
-    Debug(): Thenable<string[]> {
+    monitor(): Thenable<string[]> {
+        return new Promise((resolve) => { resolve("not implemented"); });
+    }
+
+    debug(): Thenable<string[]> {
         return new Promise((resolve) => { resolve("not implemented"); });
     }
 }
