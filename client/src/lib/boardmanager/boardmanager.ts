@@ -5,7 +5,6 @@ import Package from './Package';
 
 export class BoardManager implements IBoardManager {
     readonly ArdDbgExe: ArduinoDebug;
-    readonly Arduino15Path: string = '%USERPROFILE%\\AppData\\Local\\Arduino15';
     constructor(arddbg: ArduinoDebug) { }
     ListInstalled(packageName: string, architecture: string, version?: string): Thenable<Package[]> {
         return new Promise((resolve) => {

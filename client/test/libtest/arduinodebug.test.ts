@@ -16,7 +16,7 @@ suite("ArduinoDebug", () => {
     var idbg: ArduinoDebug = new ArduinoDebug("ardexe_path", "ino_path", "bui_path");
     // Defines a Mocha unit test
     test("Build", () => {
-        let r = idbg.Build("ardexe_path").then((ret) => {
+        let r = idbg.build("ardexe_path").then((ret) => {
             assert.equal("not implemented", ret);
         });
     });

@@ -8,21 +8,21 @@ export interface IArduinoDebug {
     // arduino --board arduino:avr:nano:cpu=atmega168 --port /dev/ttyACM0 --upload /path/to/sketch/sketch.ino
 
 
-    Init(): Thenable<Array<string>>;
+    init(): Thenable<Array<string>>;
 
-    Build(inoPath: string): Thenable<Array<string>>;
+    build(inoPath: string): Thenable<Array<string>>;
 
-    Upload(inoPath: string): Thenable<Array<string>>;
+    upload(inoPath: string): Thenable<Array<string>>;
 
-    GetPreference(pref: string): Thenable<Array<any>>;
+    getPreference(pref: string): Thenable<Array<any>>;
 
-    InstallBoard(boardCmdParam: string): Thenable<Array<string>>;
+    installBoard(boardCmdParam: string): Thenable<Array<string>>;
 
-    InstallLibrary(libarayCmdParam: string): Thenable<Array<string>>;
+    installLibrary(libarayCmdParam: string): Thenable<Array<string>>;
 
-    Monitor(): Thenable<Array<string>>;
+    monitor(): Thenable<Array<string>>;
 
-    Debug(): Thenable<Array<string>>;
+    debug(): Thenable<Array<string>>;
 }
 
 export enum ExitStatus {
