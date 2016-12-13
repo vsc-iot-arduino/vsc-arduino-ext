@@ -1,0 +1,8 @@
+client/.vscode/.BROWSE.VC.DB
+client/.vscode/.BROWSE.VC.DB-wal
+server/.vscode/.BROWSE.VC.DB
+server/.vscode/.BROWSE.VC.DB-wal
+
+out/
+**/node_modules/
+!.gitignore
